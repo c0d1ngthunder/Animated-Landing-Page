@@ -13,6 +13,10 @@ header{
     font-size: 30px;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -68,11 +72,6 @@ main{
     margin-bottom: 20px;
 }
 
-#right{
-    width: 50%;
-    position: relative;
-
-}
 
 #left>button{
     padding: 20px;
@@ -81,6 +80,12 @@ main{
     border-radius: 10px;
     border: none;
     font-size: 20px;
+}
+
+#right{
+    width: 50%;
+    position: relative;
+
 }
 
 #right img{
