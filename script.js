@@ -48,7 +48,7 @@ function p2animation() {
             trigger: "#services",
             scroller: "body",
             start: "top 50%",
-            end: "top -20%",
+            end: "top -10%",
             scrub: 2
         }
     })
