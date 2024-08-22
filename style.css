@@ -296,7 +296,7 @@ button:hover::before {
 
 .learn-more{
     padding: 30px;
-    margin: 50px;
+    margin: 0 50px;
     border-radius: 10px;
     display: flex;
     height: 300px;
