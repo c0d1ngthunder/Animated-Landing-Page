@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ibm;
+    src: url(assets/Montserrat-Bold.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -36,6 +41,10 @@ nav {
     font-weight: 500;
 }
 
+.nav-part2 i {
+    display: none;
+}
+
 nav button {
     padding: 1vw 1vw;
     background-color: transparent;
@@ -48,16 +57,17 @@ nav h1 i {
 }
 
 main {
-    height: 85%;
+    height: 90%;
     width: 100%;
 }
 
 #hero-section {
-    height: 100%;
+    height: auto;
     width: 100%;
-    padding: 30px 50px;
+    margin: 30px 50px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #left {
@@ -66,7 +76,8 @@ main {
 }
 
 #left h1 {
-    font-size: 60px;
+    font-family: ibm;
+    font-size: 50px;
 }
 
 #left p {
@@ -112,22 +123,22 @@ button:hover::before {
 #right {
     width: 50%;
     position: relative;
-
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 #right img {
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 80%;
+    position: static;
 }
 
 #brands {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 50px 50px;
-    position: relative;
+    margin: 50px;
+    width: 90%;
+    gap: 10px;
 }
 
 #brands img {
@@ -135,7 +146,7 @@ button:hover::before {
 }
 
 .services {
-    padding: 50px;
+    margin: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -160,21 +171,22 @@ button:hover::before {
 #container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     height: 80%;
-    padding: 20px 20px;
+    margin: 50px;
     flex-wrap: wrap;
 }
 
 .elem {
-    padding: 20PX;
+    padding: 20px;
     display: flex;
+    flex-direction: row;
     height: 250px;
     width: 40%;
     border: 4px solid black;
-    border-radius: 10px;
-    gap: 40px;
+    border-radius: 30px;
     margin: 40px;
+    min-width: 480px;
     box-shadow: 0 10px 0 black;
 }
 
@@ -196,6 +208,7 @@ button:hover::before {
 
 .part2 {
     position: relative;
+    width: 50%;
 }
 
 .part2 img {
@@ -236,11 +249,13 @@ button:hover::before {
 
 .contact-us {
     height: 300px;
+    width: 90%;
     background-color: rgba(128, 128, 128, 0.128);
     margin: 50px;
     padding: 30px;
     border-radius: 10px;
     display: flex;
+    justify-content: space-between;
 }
 
 .contact-left {
@@ -264,21 +279,30 @@ button:hover::before {
     border-radius: 10px;
     border: none;
     font-size: 20px;
+    position: relative;
 }
 
 .contact-right {
-    width: 50%;
+    width: 20%;
+    position: relative;
 }
 
+.contact-right img {
+    position: absolute;
+    right: 0;
+}
 
 .case-study {
-    padding: 50px;
+    margin: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .case-study h2 {
+    background-color: #9AE975;
+    padding: 10px;
+    border-radius: 5px;
     font-size: 35px;
 }
 
@@ -288,36 +312,162 @@ button:hover::before {
     font-size: 20px;
 }
 
-.case-study h2 {
-    background-color: #9AE975;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.learn-more{
+.learn-more {
     padding: 30px;
+    width: 90%;
     margin: 0 50px;
     border-radius: 10px;
     display: flex;
     height: 300px;
     background-color: rgba(0, 0, 0);
     color: white;
-
 }
 
-.learn-more-sec{
+.learn-more-sec {
     font-size: 20px;
     width: 33.33%;
     border-right: 1px solid gray;
     padding: 50px;
 }
 
-#last-elem{
+#last-elem {
     border: none;
 }
 
-.more{
+.more {
     padding: 20px 0;
     font-size: 25px;
     color: #9AE975;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width:1290px) {
+    .elem {
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width:1150px) {
+    .nav-part2 h4 {
+        display: none;
+    }
+
+    .nav-part2 button {
+        display: none;
+    }
+
+    .nav-part2 i {
+        display: inline;
+    }
+
+    /* #right img{
+        height: 80%;
+    } */
+
+    #left {
+        width: 40%;
+    }
+
+    #right {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:1250px) {
+    .contact-left {
+        width: 65%;
+    }
+    .elem {
+        width: 45%;
+    }
+}
+
+
+@media only screen and (max-width:1050px) {
+    #brands {
+        flex-wrap: wrap;
+    }
+
+    .learn-more {
+        flex-direction: column;
+        height: 650px;
+    }
+
+    .learn-more-sec {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid gray;
+    }
+    #right {
+        width: 60%;
+        padding: 0;
+    }
+
+    #right img {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width:870px) {
+    .contact-us {
+        flex-direction: column;
+        position: relative;
+        height: 600px;
+    }
+
+    .learn-more {
+        height: 750px;
+    }
+
+    .case-study p {
+        width: 70%;
+    }
+
+    .contact-right {
+        height: 50%;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .contact-right img {
+        left: 0
+    }
+
+    #hero-section {
+        flex-direction: column;
+    }
+
+    #right {
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    #left {
+        width: 100%;
+    }
+
+    .contact-left button {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    .contact-left {
+        height: 200px;
+    }
+
+    #container {
+        justify-content: center;
+    }
+    
+    .contact-us{
+        height: 700px;
+    }
+}
+
+@media only screen and (max-width:780px) {
+    .case-study h2 {
+        width: 40%;
+    }
 }

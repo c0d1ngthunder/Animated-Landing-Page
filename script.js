@@ -9,6 +9,12 @@ function p1animation() {
         stagger: 0.1
     })
 
+    tl.from(".nav-part2 i",{
+        y: -40,
+        duration: .5,
+        opacity: 0
+    })
+
     tl.from("#hero-section h1,#hero-section p", {
         opacity: 0,
         x: -200,
