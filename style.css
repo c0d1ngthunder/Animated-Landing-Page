@@ -12,27 +12,28 @@
 html , body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 header {
-    width: 100%;
+    /* width: 100%; */
     font-size: 30px;
     height: 10%;
 }
 
 nav{
-    position: fixed;
+    position: sticky;
     font-size: 30px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    height: 10%;
+    height: 80px;
     padding: 0px 50px;
     width: 100%;
     z-index: 9;
     background-color: #9ae97544;
     backdrop-filter: blur(20px);
 }
-
 #responsive-menu{
     padding: 50px;
     position: fixed;
@@ -50,9 +51,6 @@ nav{
     font-size: 50px;
 }
 
-body {
-    overflow-x: hidden;
-}
 /* 
 nav {
     display: flex;
@@ -78,6 +76,7 @@ nav button {
     padding: 1vw 1vw;
     background-color: transparent;
     border-radius: 10px;
+    border: 1px solid #111;
 }
 
 nav h1 i {
@@ -88,7 +87,6 @@ nav h1 i {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
 }
 
@@ -131,10 +129,11 @@ button {
     overflow: hidden;
 }
 
+/* Button hover effect */
 button::before {
     content: "";
     width: 0;
-    height: 63px;
+    height: 100%;
     border-radius: 10px;
     position: absolute;
     top: 0;
@@ -146,7 +145,7 @@ button::before {
 }
 
 button:hover::before {
-    width: 300px;
+    width: 100%;
 }
 
 #right {
@@ -154,7 +153,6 @@ button:hover::before {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 #right img {
@@ -185,20 +183,17 @@ button:hover::before {
     align-items: center;
 }
 
-.services h2 {
-    font-size: 35px;
-}
-
 .services p {
     width: 40%;
     margin-left: 20px;
     font-size: 20px;
 }
 
-.services h2 {
+.sub-heading{
     background-color: #9AE975;
     padding: 10px;
     border-radius: 5px;
+    font-size: 35px;
 }
 
 #container {
@@ -315,7 +310,7 @@ button:hover::before {
 }
 
 .contact-right {
-    width: 20%;
+    width: 50%;
     position: relative;
 }
 
@@ -329,13 +324,6 @@ button:hover::before {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-
-.case-study h2 {
-    background-color: #9AE975;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 35px;
 }
 
 .case-study p {
@@ -389,7 +377,8 @@ button:hover::before {
     }
 
     .nav-part2 i {
-        display: inline;
+        display: inline-block;
+        font-size: 24px;
     }
 
     /* #right img{
@@ -403,17 +392,10 @@ button:hover::before {
     #right {
         width: 60%;
     }
-}
-
-@media only screen and (max-width:1250px) {
-    .contact-left {
-        width: 65%;
-    }
-    .elem {
-        width: 45%;
+    #container{
+        justify-content: center;
     }
 }
-
 
 @media only screen and (max-width:1050px) {
     #brands {
@@ -438,6 +420,10 @@ button:hover::before {
     #right img {
         height: 80%;
     }
+
+    .contact-us{
+        height: max-content;
+    }
 }
 
 @media only screen and (max-width:870px) {
@@ -455,14 +441,10 @@ button:hover::before {
 
     #right {
         width: 100%;
-        margin-bottom: 20px;
-        justify-content: center;
+        margin: 50px 0;
     }
     #left {
         width: 100%;
-    }
-    #container {
-        justify-content: center;
     }
 }
 
@@ -470,4 +452,21 @@ button:hover::before {
     .case-study h2 {
         width: 40%;
     }
+    .sec p{
+        width: 80%;
+    }
+    p{
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #brands{
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width:720px) {
+        
 }
