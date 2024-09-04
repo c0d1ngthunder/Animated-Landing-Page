@@ -91,6 +91,26 @@ function p2animation() {
     }, "lin2")
 }
 
+function btneffect(){
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('mouseenter', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+    
+            this.style.setProperty('--x', `${x}px`);
+            this.style.setProperty('--y', `${y}px`);
+        });
+    
+        button.addEventListener('mouseleave', function(e) {
+            this.style.removeProperty('--x');
+            this.style.removeProperty('--y');
+        });
+    });
+    
+    
+}
 
 p1animation()
 p2animation()
+btneffect()
