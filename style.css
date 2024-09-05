@@ -3,6 +3,16 @@
     src: url(assets/Montserrat-Bold.ttf);
 }
 
+@font-face {
+    font-family: ibm-chota;
+    src: url(assets/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(assets/Montserrat-Regular.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -24,6 +34,7 @@ header {
 nav{
     position: sticky;
     font-size: 30px;
+    font-family: ibm;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,18 +48,29 @@ nav{
 #responsive-menu{
     padding: 50px;
     position: fixed;
-    width: 40%;
-    right: -40%;
-    z-index: 9;
+    width: 100%;
     height: 100%;
+    right: -100%;
+    z-index: 9;
+    overflow: scroll;
+    background-color: #9ae97565;
     backdrop-filter: blur(10px);
     top: 0;
-    mix-blend-mode: difference;
 }
 
 #responsive-menu h2{
     margin: 30px;
     font-size: 50px;
+    font-family: ibm-chota;
+}
+
+#responsive-menu i{
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    padding: 30px 50px;
+    top: 0;
+    right: 0;
 }
 
 /* 
@@ -66,6 +88,7 @@ nav {
 
 .nav-part2 h4 {
     font-weight: 500;
+    font-family: ibm-chota;
 }
 
 .nav-part2 i {
@@ -146,8 +169,8 @@ button::before {
 }
 
 button:hover::before {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     transform: translate(-50%, -50%);
 }
 
@@ -198,6 +221,7 @@ button:hover::before {
     padding: 10px;
     border-radius: 5px;
     font-size: 35px;
+    font-family: ibm-chota;
 }
 
 #container {
@@ -233,7 +257,7 @@ button:hover::before {
 
 .part1 h3 {
     background-color: #9AE975;
-    font-size: 30px;
+    font-size: 25px;
     width: 90%;
     border-radius: 5px;
 }
@@ -277,6 +301,10 @@ button:hover::before {
 
 .black .part1 h3 {
     background-color: white;
+}
+
+h3{
+    font-family: ibm-chota;
 }
 
 .contact-us {
@@ -377,9 +405,7 @@ button:hover::before {
     .contact-us{
         height: max-content;
     }
-}
-
-@media only screen and (max-width:1150px) {
+    
     .nav-part2 h4 {
         display: none;
     }
@@ -392,6 +418,9 @@ button:hover::before {
         display: inline-block;
         font-size: 24px;
     }
+}
+
+@media only screen and (max-width:1150px) {
 
     /* #right img{
         height: 80%;
@@ -498,7 +527,7 @@ button:hover::before {
 
 @media only screen and (max-width:650px) {
     .contact-us{
-        grid-template-rows: 3fr 3fr 1.5fr;
+        grid-template-rows: 3fr 3fr 1.1fr;
         position: relative;
     }
     .contact-left{
@@ -515,7 +544,7 @@ button:hover::before {
         grid-row: 2/3;
         grid-column: 1/3;
     }
-    .contact-right img{
+    /* .contact-right img{
         height: 100%;
-    }
+    } */
 }

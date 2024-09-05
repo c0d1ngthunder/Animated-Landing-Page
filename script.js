@@ -9,7 +9,7 @@ function p1animation() {
         stagger: 0.1
     })
 
-    tl.from(".nav-part2 i",{
+    tl.from(".nav-part2 i", {
         y: -40,
         duration: .5,
         opacity: 0
@@ -91,25 +91,58 @@ function p2animation() {
     }, "lin2")
 }
 
-function btneffect(){
+function btneffect() {
     document.querySelectorAll('button').forEach(button => {
-        button.addEventListener('mouseenter', function(e) {
+        button.addEventListener('mouseenter', function (e) {
             const rect = this.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-    
+
             this.style.setProperty('--x', `${x}px`);
             this.style.setProperty('--y', `${y}px`);
         });
-    
+
         // button.addEventListener('mouseleave', function(e) {
         //     this.style.removeProperty('--x');
         //     this.style.removeProperty('--y');
         // });
     });
-    
-    
+
+
 }
+    let btn = document.querySelector(".nav-part2 i")
+    let navigation = document.querySelector("#responsive-menu")
+    let clos = document.querySelector("#responsive-menu i")
+
+    let mtl = gsap.timeline()
+
+
+    mtl.to(navigation, {
+        right: 0,
+        duration: 0.7
+    })
+
+    mtl.from(`#responsive-menu h2`, {
+        x: 200,
+        duration: 0.8,
+        stagger: 0.2,
+        opacity: 0
+    })
+
+    mtl.from(`#responsive-menu i`, {
+        opacity: 0
+    })
+
+    mtl.pause()
+
+    btn.addEventListener("click", function () {
+        mtl.play()
+    })
+
+    clos.addEventListener("click", function () {
+        mtl.reverse()
+    })
+
 
 p1animation()
 p2animation()
