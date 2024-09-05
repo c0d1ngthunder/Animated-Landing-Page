@@ -71,6 +71,7 @@ nav{
     padding: 30px 50px;
     top: 0;
     right: 0;
+    cursor: pointer;
 }
 
 /* 
@@ -93,6 +94,7 @@ nav {
 
 .nav-part2 i {
     display: none;
+    cursor: pointer;
 }
 
 nav button {
@@ -547,4 +549,10 @@ h3{
     /* .contact-right img{
         height: 100%;
     } */
+}
+
+@media only screen and (max-width:300px) {
+    #brands{
+        justify-content: center;
+    }
 }
