@@ -102,10 +102,10 @@ function btneffect(){
             this.style.setProperty('--y', `${y}px`);
         });
     
-        button.addEventListener('mouseleave', function(e) {
-            this.style.removeProperty('--x');
-            this.style.removeProperty('--y');
-        });
+        // button.addEventListener('mouseleave', function(e) {
+        //     this.style.removeProperty('--x');
+        //     this.style.removeProperty('--y');
+        // });
     });
     
     
